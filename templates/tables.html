@@ -18,6 +18,7 @@
   <link href="static/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="static/demo/demo.css" rel="stylesheet" />
+  <link href="static/css/styles.css" rel="stylesheet"/>
 </head>
 
 <body class="">
@@ -38,25 +39,25 @@
           <li>
             <a href="{{ url_for('dash')}}">
               <i class="now-ui-icons design_app"></i>
-              <p>Dashboard</p>
+              <p>HOME</p>
             </a>
           </li>
           <li>
             <a href="{{ url_for('descriptive')}}">
               <i class="now-ui-icons education_atom"></i>
-              <p>Health Icons</p>
+              <p>HEALTHCARE ANALYTICS</p>
             </a>
           </li>
           <li class="active ">
             <a href="{{ url_for('aboutpage')}}">
               <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>About Us</p>
+              <p>PREDICT FDI</p>
             </a>
           </li>
           <li>
             <a href="{{ url_for('contactpage')}}">
               <i class="now-ui-icons users_single-02"></i>
-              <p>Contact Us</p>
+              <p>CONTACT US</p>
             </a>
           </li>
         </ul>
@@ -83,43 +84,46 @@
         <div class="row">
           <div class="col-md-12">
             <div class="card">
-              <div class="card-header">
-                <h4 class="card-title">Know about us</h4>
-              </div>
+             <div class="scroll-left">
+            <marquee>  The Government of India Policy to encourage investment in the health care sector, government of India has allowed 100% FDI under the automatic route</marquee>
+            <marquee>  Government has also accorded the infrastructure status to the hospitals and Lower tariffs on medical equipment</marquee>
+                </div>
+              <form action="" method="POST" class="tm-contact-form">
+                        <div class="form-group">
+                        <h2 class="tm-color-primary tm-section-title">Predict FDI in Health sector</h2>
+                            <p>Select the year to be predicted </p>
+                            <select name="classifier" id="classifier">
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            </select>
+                            </div>
+                        <div class="form-group">
+                            <p> Select time series model</p>
+                            <select name="classifier" id="classifier">
+                            <option value="arima"> ARIMA </option>
+                            <option value="autoreg">AUTO REGRESSION</option>
+                            <option value="ma"> MOVING AVERAGE </option>
+                            </select>
+
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group mb-0">
+                          <button type="submit" class="button" >
+                              <center><b>Generate weather reports and predict</b></center>
+                          </button>
+                        </div>
+                      </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <footer class="footer">
-        <div class=" container-fluid ">
-          <nav>
-            <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Spartanz Cruse
-                </a>
-              </li>
-              <li>
-                <a href="http://presentation.creative-tim.com">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="copyright" id="copyright">
-            &copy; <script>
-              document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-            </script>, Designed by <a href="https://www.invisionapp.com" target="_blank">Spartanz Cruse</a>. Coded by <a href="https://www.creative-tim.com" target="_blank">DRT</a>.
-          </div>
-        </div>
-      </footer>
+      </div>
     </div>
   </div>
   <!--   Core JS Files   -->
