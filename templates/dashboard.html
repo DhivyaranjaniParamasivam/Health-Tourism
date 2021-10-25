@@ -7,11 +7,101 @@
   <link rel="icon" type="image/png" href="static/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    HEALTH ICONS
+    HEALTH TOURISM
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+<meta name="viewport" content="width=110px, initial-scale=1">
+<style>
+img.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 500px;
+}
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+
+
   <!--     Fonts and icons     -->
-   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis
+
+
+
+/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <!-- CSS Files -->
@@ -25,6 +115,7 @@
     <link href="static/css/queries.css?v=1.6" rel="stylesheet">
     <link href="static/css/jquery.fancybox.css" rel="stylesheet">
 </head>
+
 
 <body class="">
   <div class="wrapper ">
@@ -41,25 +132,25 @@
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
-          <li class="active ">
+         <li class="active ">
             <a href="{{ url_for('dash') }}">
               <i class="now-ui-icons design_app"></i>
               <p>HOME</p>
             </a>
           </li>
-          <li >
+		   <li >
             <a href="{{ url_for('descriptive') }}">
               <i class="now-ui-icons education_atom"></i>
               <p>HEALTHCARE ANALYTICS</p>
-            </a>
-          </li>
+		</a>
+		 </li>
           <li>
             <a href="{{ url_for('aboutpage') }}">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>PREDICT FDI</p>
             </a>
           </li>
-           <li>
+          <li>
             <a href="{{ url_for('contactpage') }}">
               <i class="now-ui-icons users_single-02"></i>
               <p>CONTACT US</p>
@@ -120,18 +211,152 @@
               <div class="card-header">
                 <h5 class="card-category">Medical Treatment, Ayurveda Overview and Wellness & Rejuvenation </h5>
                 <h4 class="card-title"> </h4>
-                <div class="dropdown">
-                </div>
               </div>
-              <div class="card-body">
-                <div class="chart-area">
-                 Streamlined processes, advanced technologies, state-of-the-art infrastructures, specialised & interdisciplinary care, along with highly knowledgeable and skilled doctors, supported by a thoroughly trained and compassionate staff makes India home to a number of top 10 hospitals in the world. While affordable orthopaedic treatment packages and cancer treatment packages has made the country a premium destination for medical tourism among other developing countries such as Bangladesh, Afghanistan, Iraq, Maldives, Oman, Yemen, etc., cost effective dental care and plastic surgery options in the country has attracted patients from developed nations such as US, UK, Germany, etc.Using specific programs that take into consideration the cultural and ethnic background of the patients to provide a ‘home away from home’ stay, they employ specialised teams trained to make the patient comfortable during their stay. Further, between the Indraprastha Apollo Hospital in Delhi, the Lilavati Hospital and Research Center in Mumbai, the Billroth Hospital in Chennai, the Columbia Asia Hospital in Kolkata, it is clear that there is no definite answer to which is the number one hospital in India. 
-                <br><br>
-                Ayurveda in Sanskrit means "Knowledge of Life" ( Ayur - lifespan, and Veda-knowledge). The basis of this medical form is solid Indian writings of old, compiled over a 2 century period between 1500 BC and 400 AD, when many experts put down their observations and experiences.
-                <br><br>
-               Owing to its rich tradition of ancient practices such as Ayurveda and Yoga, India is one of the top destinations for wellness and rejuvenation. Over the last couple of years in particular, thanks in part to globalisation bridging the gap between the “East” and the “West,” the world has taken an interest in not just the science behind the alternative medicinal practices of Naturopathy and Siddha, the history of Ayurveda, and the practice of Yoga, but also in the multi-dimensional concept of physical, mental and emotional well-being and their documented benefits. 
-                </div>
-              </div>
+<!-- MAIN (Center website) -->
+<div class="main">
+<h1>HEALTHCARETOURISM.COM</h1>
+<hr>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('nature')"> Wellness</button>
+  <button class="btn" onclick="filterSelection('cars')"> Savings</button>
+  <button class="btn" onclick="filterSelection('people')"> Doctors</button>
+</div>
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="static\img\1.jpg" alt="Mountains" style="width:100%">
+      <h4>WELLNESS AND REJUVENATION</h4>
+      <p>The country sees a steady influx of tourists from United States, United Kingdom, Canada, Germany, France, etc</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="static\img\2.jpg" alt="Lights" style="width:100%">
+      <h4>Health and wellness</h4>
+      <p>With consistent efforts by the government to strengthen and popularize alternative medicine systems and incredible growth opportunities across different segments</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="static\img\3.jpg" alt="Nature" style="width:100%">
+      <h4>Medical Treatment</h4>
+      <p>It is clear that there is no definite answer to which is the number one hospital in India</p>
+    </div>
+  </div>
+  
+
+  <div class="column cars">
+    <div class="content">
+      <img src="static\img\7.jpg" alt="Car" style="width:100%">
+      <h4>Fast Track – Zero Waiting Time</h4>
+      <p>Quick and immediate attention for surgeries and all interventions are assured </p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="static\img\8.jpg" alt="Car" style="width:100%">
+      <h4>Frontier technologies</h4>
+      <p>Cutting edge technology to support medical diagnostics and medical procedures are employed by specialists in medical facilities</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="static\img\9.jpg" alt="Car" style="width:100%">
+      <h4>Global hub</h4>
+      <p>With its plethora of highly skilled professionals and affordable healthcare, India is on course to become the next premium medical tourism destination.</p>
+    </div>
+  </div>
+<div class="column people">
+    <div class="content">
+    <img src="static\img\10.jpg" alt="Car" style="width:100%">
+      <h4>Financial Savings</h4>
+      <p>Quality of care is what attracts people</p>
+    </div>
+  </div>
+<div class="column people">
+    <div class="content">
+    <img src="static\img\11.jpg" alt="Car" style="width:100%">
+      <h4>Feeling the pulse</h4>
+      <p>For greater understanding between patients and healthcare personnel, the warmth and hospitality of Indian hospitals is a big factor in choosing India as a healthcare destination.</p>
+    </div>
+  </div>
+<div class="column people">
+    <div class="content">
+    <img src="static\img\12.jpg" alt="Car" style="width:100%">
+      <h4>Finest Doctors</h4>
+      <p>India has not only hospitals with world-class facilities but skilled world-class doctors and medical personnel too</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+    
+
+
+<img class="sticky" src="static\img\stickyimage.jpg" width="50000" height="500" align="left" alt="Avatar">
+
+<p>
+       <h2>          Streamlined processes, advanced technologies, state-of-the-art infrastructures, specialised & interdisciplinary care<h2><h4> Along with highly knowledgeable and skilled doctors, supported by a thoroughly trained and compassionate staff makes India home to a number of top 10 hospitals in the world.<h4>
+               
+                <h2>Ayurveda in Sanskrit means "Knowledge of Life" ( Ayur - lifespan, and Veda-knowledge). 
+India being the home to this form of treatment offers many exciting therapeutic and rejuvenation packages. <h2><h4>Experience healing and rejuvenation through this ancient form run by India’s accredited centres with all modern amenities in natural settings to make your stay a memorable one.<h4>
+              <h2> Owing to its rich tradition of ancient practices such as Ayurveda and Yoga, India is one of the top destinations for wellness and rejuvenation. <h2><h4>
+The country sees a steady influx of tourists from United States, United Kingdom, Canada, Germany, France, etc..<h4>
+<h3>
+</p>
+               
+
+
               <br><br><br>
               <div class="row">
             <div class="col-md-12 text-center">
@@ -217,16 +442,6 @@
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="static/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="static/demo/demo.js"></script>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-      <script src="static/js/jquery.fancybox.pack.js"></script>
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="static/js/bootstrap.min.js"></script>
-      <script src="static/js/scripts.js?v=1.7"></script>
-      <script src="static/js/jquery.flexslider.js"></script>
-      <script src="static/js/jquery.smooth-scroll.js"></script>
-      <script src="static/js/modernizr.js"></script>
-      <script src="static/js/waypoints.min.js"></script>
 </body>
 
 </html>
